@@ -1,6 +1,6 @@
 .primary-btn {
   color: #fff;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   leading-trim: both;
   text-edge: cap;
   font-family: Montserrat;
