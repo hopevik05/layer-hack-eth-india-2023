@@ -1,17 +1,20 @@
 import { ReactNode, useState } from "react";
-import Footer from "./footer"
 import Header from "./header";
-import '../../../assets/css/layout.css'
+import Sidebar from "./sidebar";
 
 export default function AppLayout({ children }: { children: ReactNode }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
-    <div className="bg-white">
-      <Header setMobileMenuOpen={setSidebarOpen} mobileMenuOpen={sidebarOpen} />
-      <main className="isolate">
-        {children}
-        <Footer />
-      </main>
-    </div>
+    <>
+      <div>
+        <Sidebar setSidebarOpen={setSidebarOpen} sidebarOpen={sidebarOpen} />
+        <div className="lg:pl-72">
+          <Header setSidebarOpen={setSidebarOpen} />
+          <main className="py-4">
+            <div className="px-4 sm:px-6 lg:px-8">{children}</div>
+          </main>
+        </div>
+      </div>
+    </>
   );
 }

@@ -1,3 +1,5 @@
 export const APP_ROUTES = {
-  home: "/",
+  dashboard: "/",
+  explore: "/explore",
+  events: "/events",
 };
