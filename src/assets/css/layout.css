@@ -1,0 +1,10 @@
+.footer .head {
+  color: #000;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Neue Machina;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 101%; /* 42.42px */
+}

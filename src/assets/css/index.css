@@ -1,0 +1,30 @@
+.primary-btn {
+  color: #fff;
+  text-transform: uppercase;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 5px;
+  background: #ed1e79;
+  height: 50px;
+}
+
+.secondary-btn {
+  border-radius: 5px;
+  text-transform: uppercase;
+  border: 2px solid #ed1e79;
+  background: #fff;
+  color: #ed1e79;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  height: 50px;
+  line-height: normal;
+}
