@@ -13,14 +13,6 @@ function AppRoutes(): React.ReactElement {
     <BrowserRouter>
       <Routes>
         <Route
-          path={APP_ROUTES.dashboard}
-          element={
-            <React.Suspense fallback={<LoadingPage />}>
-              <LayerHack />
-            </React.Suspense>
-          }
-        />
-        <Route
           path={APP_ROUTES.explore}
           element={
             <React.Suspense fallback={<LoadingPage />}>
@@ -28,7 +20,7 @@ function AppRoutes(): React.ReactElement {
             </React.Suspense>
           }
         />
-         <Route
+        <Route
           path={APP_ROUTES.events}
           element={
             <React.Suspense fallback={<LoadingPage />}>

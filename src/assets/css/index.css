@@ -28,3 +28,29 @@
   height: 50px;
   line-height: normal;
 }
+
+.chat-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.chat-history {
+  /* border: 1px solid #ccc; */
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.message {
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.user {
+  background-color: #f0f0f0;
+}
+
+.assistant {
+  background-color: #e6f7ff;
+}

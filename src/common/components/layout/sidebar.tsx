@@ -1,13 +1,6 @@
 import { Dialog, Transition } from "@headlessui/react";
-import {
-  AcademicCapIcon,
-  CalendarIcon,
-  HomeIcon,
-} from "@heroicons/react/20/solid";
-import {
-  Cog6ToothIcon,
-  XMarkIcon
-} from "@heroicons/react/24/outline";
+import { AcademicCapIcon, CalendarIcon } from "@heroicons/react/20/solid";
+import { XMarkIcon } from "@heroicons/react/24/outline";
 import React, { Dispatch, Fragment, SetStateAction } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../../../assets/logo/layer-hack.svg";
@@ -17,29 +10,29 @@ function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
 }
 
-const links = [
-  {
-    id: 1,
-    name: "Link 1",
-    href: "https://10az.online.tableau.com/#/site/dataexploreraevaai/views/IndexPage/IndexPage",
-    initial: "H",
-    current: false,
-  },
-  {
-    id: 2,
-    name: "Link 2",
-    href: "http://dataqueryapp.aeva.ai:8066/",
-    initial: "F",
-    current: false,
-  },
-  {
-    id: 3,
-    name: "Link 3",
-    href: "http://dataqueryapp.aeva.ai:8067/",
-    initial: "P",
-    current: false,
-  },
-];
+// const links = [
+//   {
+//     id: 1,
+//     name: "Link 1",
+//     href: "https://10az.online.tableau.com/#/site/dataexploreraevaai/views/IndexPage/IndexPage",
+//     initial: "H",
+//     current: false,
+//   },
+//   {
+//     id: 2,
+//     name: "Link 2",
+//     href: "http://dataqueryapp.aeva.ai:8066/",
+//     initial: "F",
+//     current: false,
+//   },
+//   {
+//     id: 3,
+//     name: "Link 3",
+//     href: "http://dataqueryapp.aeva.ai:8067/",
+//     initial: "P",
+//     current: false,
+//   },
+// ];
 
 function Sidebar({
   setSidebarOpen,
@@ -50,12 +43,6 @@ function Sidebar({
 }) {
   const navigate = useNavigate();
   const navigation = [
-    {
-      name: "Dashboard",
-      href: APP_ROUTES.dashboard,
-      icon: HomeIcon,
-      current: window.location.pathname === APP_ROUTES.dashboard,
-    },
     {
       name: "Explore",
       href: APP_ROUTES.explore,
@@ -74,8 +61,8 @@ function Sidebar({
       <Transition.Root show={sidebarOpen} as={Fragment}>
         <Dialog
           as="div"
-          // className="relative z-50 lg:hidden"
-          className="relative z-50"
+          className="relative z-50 lg:hidden"
+          // className="relative z-50"
           onClose={setSidebarOpen}
         >
           <Transition.Child
@@ -87,7 +74,7 @@ function Sidebar({
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-gray-900/80" />
+            {/* <div className="fixed inset-0 bg-gray-900/80" /> */}
           </Transition.Child>
 
           <div className="fixed inset-0 flex">
@@ -161,7 +148,7 @@ function Sidebar({
                           ))}
                         </ul>
                       </li>
-                      <li>
+                      {/* <li>
                         <div className="text-xs font-semibold leading-6 text-gray-400">
                           Useful links
                         </div>
@@ -193,8 +180,8 @@ function Sidebar({
                             </li>
                           ))}
                         </ul>
-                      </li>
-                      <li className="mt-auto">
+                      </li> */}
+                      {/* <li className="mt-auto">
                         <a
                           href="/"
                           className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-700 hover:bg-gray-50 hover:text-indigo-600"
@@ -205,7 +192,7 @@ function Sidebar({
                           />
                           Settings
                         </a>
-                      </li>
+                      </li> */}
                     </ul>
                   </nav>
                 </div>
@@ -256,7 +243,7 @@ function Sidebar({
                   ))}
                 </ul>
               </li>
-              <li>
+              {/* <li>
                 <div className="text-xs font-semibold leading-6 text-gray-400">
                   Useful links
                 </div>
@@ -288,8 +275,8 @@ function Sidebar({
                     </li>
                   ))}
                 </ul>
-              </li>
-              <li className="mt-auto">
+              </li> */}
+              {/* <li className="mt-auto">
                 <a
                   href="/"
                   className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-700 hover:bg-gray-50 hover:text-indigo-600"
@@ -300,7 +287,7 @@ function Sidebar({
                   />
                   Settings
                 </a>
-              </li>
+              </li> */}
             </ul>
           </nav>
         </div>
