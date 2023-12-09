@@ -1,5 +1,6 @@
 export const APP_ROUTES = {
-  dashboard: "/",
+  socials: "/socials",
   explore: "/explore",
   events: "/events",
+  admin: "/admin",
 };

@@ -1,6 +1,6 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { AcademicCapIcon, CalendarIcon } from "@heroicons/react/20/solid";
-import { XMarkIcon } from "@heroicons/react/24/outline";
+import { XMarkIcon, BookOpenIcon } from "@heroicons/react/24/outline";
 import React, { Dispatch, Fragment, SetStateAction } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../../../assets/logo/layer-hack.svg";
@@ -10,29 +10,6 @@ function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
 }
 
-// const links = [
-//   {
-//     id: 1,
-//     name: "Link 1",
-//     href: "https://10az.online.tableau.com/#/site/dataexploreraevaai/views/IndexPage/IndexPage",
-//     initial: "H",
-//     current: false,
-//   },
-//   {
-//     id: 2,
-//     name: "Link 2",
-//     href: "http://dataqueryapp.aeva.ai:8066/",
-//     initial: "F",
-//     current: false,
-//   },
-//   {
-//     id: 3,
-//     name: "Link 3",
-//     href: "http://dataqueryapp.aeva.ai:8067/",
-//     initial: "P",
-//     current: false,
-//   },
-// ];
 
 function Sidebar({
   setSidebarOpen,
@@ -54,6 +31,12 @@ function Sidebar({
       href: APP_ROUTES.events,
       icon: CalendarIcon,
       current: window.location.pathname === APP_ROUTES.events,
+    },
+    {
+      name: "Socials",
+      href: APP_ROUTES.socials,
+      icon: BookOpenIcon,
+      current: window.location.pathname === APP_ROUTES.socials,
     },
   ];
   return (

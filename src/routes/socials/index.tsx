@@ -5,8 +5,7 @@ import useContract from "../../common/hooks/useContract";
 import Components from "./components";
 import WalletButton from "../../common/components/wallet/wallet-button";
 import { Spin } from "antd";
-
-function EventsPage() {
+function SocialsPage() {
   const {
     userDetails: { whitelisted, loading },
     account,
@@ -54,4 +53,4 @@ function EventsPage() {
   );
 }
 
-export default React.memo(EventsPage);
+export default React.memo(SocialsPage);

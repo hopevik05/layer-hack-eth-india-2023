@@ -3,6 +3,8 @@ import React, { Dispatch, SetStateAction } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon } from "@heroicons/react/24/outline";
 import { Fragment } from "react";
+import WalletButton from "../wallet/wallet-button";
+import useAccount from "../../hooks/useAccount";
 
 function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
@@ -14,6 +16,7 @@ function Header({
   setSidebarOpen: Dispatch<SetStateAction<boolean>>;
 }) {
   const notifications: any[] = [];
+  const { account } = useAccount();
 
   return (
     <div className="sticky top-0 z-40 flex h-16 shrink-0 items-center gap-x-4 border-b border-gray-200 bg-white px-4 shadow-sm sm:gap-x-6 sm:px-6 lg:px-8">
@@ -29,6 +32,18 @@ function Header({
 
       <div className="flex flex-1 gap-x-4 self-stretch lg:gap-x-6">
         <form className="relative flex flex-1" action="#" method="GET"></form>
+        <div className="flex">
+          <p className="flex items-center px-4 font-semibold">
+            {account
+              ? `Account : ${account.slice(0, 6)}...${account.slice(
+                  account.length - 6,
+                  account.length
+                )}`
+              : ""}
+          </p>
+
+          <WalletButton />
+        </div>
         <div className="flex items-center gap-x-4 lg:gap-x-6">
           <Menu as="div" className="relative">
             <Menu.Button className="-m-1.5 flex items-center p-1.5">
